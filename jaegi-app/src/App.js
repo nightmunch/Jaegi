@@ -18,7 +18,7 @@ function App() {
 	// }, [])
 
 	return (
-		<div class="flex mobile">
+		<div class="h-screen flex mobile">
 			<Sidebar />
 			<Examination />
 		</div>

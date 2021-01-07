@@ -8,22 +8,68 @@ import React, { useState, useEffect } from "react";
 function Examination() {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState();
-	const ic = 980327105821;
+	const [ic, setIC] = useState(0);
 
-	useEffect(() => {
-		axios.get(`/api/test/${ic}`).then((response) => {
-			console.log(response.data);
-			setData(response.data);
-			setLoading(false);
-		});
-	}, []);
+	// useEffect(() => {
+	// 	if (ic.toString().length === 12) {
+	// 		axios.get(`/api/test/${ic}`).then((response) => {
+	// 			console.log(response.data);
+	// 			setData(response.data);
+	// 			setLoading(false);
+	// 		});
+	// 	}
+	// }, []);
+
+	const handleSubmit = (event) => {
+		event.preventDefault();
+		if (ic.toString().length === 12) {
+			axios.get(`/api/test/${ic}`).then((response) => {
+				console.log(response.data);
+				setData(response.data);
+				setLoading(false);
+			});
+		} else {
+			alert("Insert the correct IC format");
+		}
+	};
 
 	if (isLoading) {
-		return <div>Loading...</div>;
+		return (
+			<div class="flex h-screen justify-center items-center w-screen font-sf">
+				<form onSubmit={handleSubmit}>
+					<label>
+						IC:
+						<input
+							type="text"
+							name="ic"
+							value={ic}
+							onChange={(e) => {
+								setIC(e.target.value);
+							}}
+						/>
+					</label>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		);
 	}
 
 	return (
 		<div class="block m-5 md:m-10 font-sf">
+			<form onSubmit={handleSubmit}>
+				<label>
+					IC:
+					<input
+						type="text"
+						name="ic"
+						value={ic}
+						onChange={(e) => {
+							setIC(e.target.value);
+						}}
+					/>
+				</label>
+				<input type="submit" value="Submit" />
+			</form>
 			<div class="">
 				<h1 class="text-2xl">Examination Result</h1>
 				<h1 class="text-sm text-gray-400 mb-5">
