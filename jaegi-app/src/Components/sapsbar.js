@@ -46,7 +46,7 @@ function Sapsbar(props) {
 					legend: {
 						display: false,
 					},
-					// responsive: false,
+					// responsive: true,
 					maintainAspectRatio: false,
 					scales: {
 						yAxes: [
