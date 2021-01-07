@@ -1,6 +1,7 @@
 import axios from "axios";
 import Marks from "./marks";
 import Sapsbar from "./sapsbar";
+import ExamChildTab from "./exam_childtab";
 
 import React, { useState, useEffect } from "react";
 
@@ -30,15 +31,7 @@ function Examination() {
 				</h1>
 			</div>
 			<div class="shadow-md flex-initial bg-white ">
-				<div class="flex overflow-x-scroll md:overflow-auto">
-					<p class="tab ">Child 1</p>
-					<p class="tab-active ">Child 2</p>
-					<p class="tab ">Child 3</p>
-					<p class="tab ">Child 4</p>
-					<p class="tab ">Child 5</p>
-					<p class="tab ">Child 6</p>
-					<p class="tab flex-auto"></p>
-				</div>
+				<ExamChildTab />
 				<div class="p-3 md:p-10">
 					<div class="shadow-md px-5 py-3">
 						<p>Tingkatan: T1 HIDROGEN</p>
