@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+/.vscode
+
+# server-side
+/server-side
+
+# design folder
+/designs
