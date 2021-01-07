@@ -48,7 +48,11 @@ function Examination() {
 							}}
 						/>
 					</label>
-					<input type="submit" value="Submit" />
+					<input
+						type="submit"
+						value="Submit"
+						class="border-transparent bg-transparent"
+					/>
 				</form>
 			</div>
 		);
@@ -68,7 +72,11 @@ function Examination() {
 						}}
 					/>
 				</label>
-				<input type="submit" value="Submit" />
+				<input
+					type="submit"
+					value="Submit"
+					class="border-transparent bg-transparent"
+				/>
 			</form>
 			<div class="">
 				<h1 class="text-2xl">Examination Result</h1>
