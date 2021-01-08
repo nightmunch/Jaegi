@@ -17,12 +17,17 @@ function Sapsbar(props) {
 		marks.push(parseInt(props.data[x].marks));
 	}
 
+	function findChoose(x) {
+		return x === props.choose;
+	}
+
 	// var marks = [74, 25, 68, 70, 95, 60, 48, 68, 57, 73, 58];
 	// other marks color
 	var color = marks.map((x) => "rgba(196, 196, 196, 1)");
 
 	color[argMax(marks)] = "rgba(244, 194, 134, 1)";
 	color[argMin(marks)] = "rgba(255, 111, 91, 1)";
+	color[subject.findIndex(findChoose)] = "rgba(125, 193, 232, 1)";
 
 	return (
 		<div>

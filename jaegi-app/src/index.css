@@ -55,6 +55,14 @@ body,
 	background-color: #404152;
 }
 
+.jaegilightgrey {
+	background-color: #bbb;
+}
+
+.jaegilightblue {
+	background-color: #7dc1e8;
+}
+
 @font-face {
 	font-family: "SF UI Display";
 	src: local("SF UI Display"),

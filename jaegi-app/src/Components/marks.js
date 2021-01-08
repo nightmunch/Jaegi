@@ -1,7 +1,17 @@
+import React, { useState } from "react";
+
 function Marks(props) {
+	const handleClick = (e) => {
+		props.onClick(props.subject);
+	};
+
 	return (
-		<div class="my-5 mx-2 flex">
-			<span class="dot mt-1 mr-3 flex-none"></span>
+		<div class="my-5 mx-2 flex" onClick={handleClick}>
+			<span
+				class={`dot mt-1 mr-3 flex-none" ${
+					props.subject == props.choosen ? "jaegilightblue" : "jaegilightgrey"
+				}`}
+			></span>
 			<div class="">
 				<p class="text-sm">{props.subject}</p>
 				<div class="text-4xl">

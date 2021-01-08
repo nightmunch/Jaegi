@@ -3,23 +3,14 @@ import Marks from "./marks";
 import Sapsbar from "./sapsbar";
 import ExamChildTab from "./exam_childtab";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function Examination() {
 	const [isLoading, setLoading] = useState(true);
 	const [data, setData] = useState();
 	const [ic, setIC] = useState("");
 	const [year, setYear] = useState("");
-
-	// useEffect(() => {
-	// 	if (ic.toString().length === 12) {
-	// 		axios.get(`/api/test/${ic}`).then((response) => {
-	// 			console.log(response.data);
-	// 			setData(response.data);
-	// 			setLoading(false);
-	// 		});
-	// 	}
-	// }, []);
+	const [choose, setChoose] = useState("choose");
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -127,7 +118,7 @@ function Examination() {
 					<div class="shadow-md p-7">
 						<p class="text-center text-2xl">{data.results[1].exam}</p>
 						<div class="graph pt-5 m-auto md:w-3/5">
-							<Sapsbar data={data.results[1].result} />
+							<Sapsbar data={data.results[1].result} choose={choose} />
 						</div>
 						<div class="flex">
 							<div class="m-5 grid sm:grid-cols-2 md:grid-cols-5">
@@ -137,6 +128,10 @@ function Examination() {
 											subject={d.subject}
 											marks={d.marks}
 											grade={d.grade}
+											onClick={(value) => {
+												setChoose(value);
+											}}
+											choosen={choose}
 										/>
 									);
 								})}
