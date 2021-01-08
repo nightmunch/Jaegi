@@ -11,50 +11,50 @@ function ExamChildTab(props) {
 	};
 
 	return (
-		<div class="flex overflow-x-scroll md:overflow-auto">
+		<div className="flex overflow-x-scroll md:overflow-auto">
 			<p
 				id={1}
-				class={active === 1 ? "tab-active" : "tab"}
+				className={active === 1 ? "tab-active" : "tab"}
 				onClick={handleClick}
 			>
 				Child 1
 			</p>
 			<p
 				id={2}
-				class={active === 2 ? "tab-active" : "tab"}
+				className={active === 2 ? "tab-active" : "tab"}
 				onClick={handleClick}
 			>
 				Child 2
 			</p>
 			<p
 				id={3}
-				class={active === 3 ? "tab-active" : "tab"}
+				className={active === 3 ? "tab-active" : "tab"}
 				onClick={handleClick}
 			>
 				Child 3
 			</p>
 			<p
 				id={4}
-				class={active === 4 ? "tab-active" : "tab"}
+				className={active === 4 ? "tab-active" : "tab"}
 				onClick={handleClick}
 			>
 				Child 4
 			</p>
 			<p
 				id={5}
-				class={active === 5 ? "tab-active" : "tab"}
+				className={active === 5 ? "tab-active" : "tab"}
 				onClick={handleClick}
 			>
 				Child 5
 			</p>
 			<p
 				id={6}
-				class={active === 6 ? "tab-active" : "tab"}
+				className={active === 6 ? "tab-active" : "tab"}
 				onClick={handleClick}
 			>
 				Child 6
 			</p>
-			<p class="tab flex-auto"></p>
+			<p className="tab flex-auto"></p>
 		</div>
 	);
 }
