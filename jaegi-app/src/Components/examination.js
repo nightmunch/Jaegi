@@ -42,7 +42,7 @@ function Examination() {
 		return (
 			<div class="flex h-screen justify-center items-center w-screen font-sf">
 				<form onSubmit={handleSubmit}>
-					<h1>Thank you for coming! (PS. Shahrin already asleep!)</h1>
+					<h1>Thank you for coming!</h1>
 					<label>
 						IC:
 						<input
